@@ -30,14 +30,14 @@ The dataset used contains anonymized customer data, including:
 
 ## 1.**Preprocessing**: Encoding categorical variables.
 2. Convert the categorical columns (SEX, EDUCATION, MARRIAGE) into dummy variables using one-hot encoding, then drop the first category to prevent multicollinearity. This prepares the model for log regression.
-3. 
-4. ![image](https://github.com/user-attachments/assets/e114792f-f7ea-4b8a-8003-8fd338fe0474)
+ 
+ ![image](https://github.com/user-attachments/assets/e114792f-f7ea-4b8a-8003-8fd338fe0474)
 
-5. The "defaulted" class seems to be imbalanced. We initialize SMOTE, which will create synthetic data points in the minority class to oversample it. We import SMOTE from imblearn and import the train_test_split sklearn. We then train the model on the synthetic data points.
-6. 
+ The "defaulted" class seems to be imbalanced. We initialize SMOTE, which will create synthetic data points in the minority class to oversample it. We import SMOTE from imblearn and import the train_test_split sklearn. We then train the model on the synthetic data points.
+ 
 ## 2. **Modeling**: Fitting a logistic regression model. Train a Decision Tree Classifier.
-8. Now that all our columns are in numeric form and class imbalance has been resolved, we perform a logistic regression. Fit the trained data onto a logistic regression model to predict whether a customer will default. This model serves as a strong and interpretable baseline. We use **sklearn** to perform the regression to get the regression report.
-9. Classification Report:
+ Now that all our columns are in numeric form and class imbalance has been resolved, we perform a logistic regression. Fit the trained data onto a logistic regression model to predict whether a customer will default. This model serves as a strong and interpretable baseline. We use **sklearn** to perform the regression to get the regression report.
+Classification Report:
 
               precision    recall  f1-score   support
 
@@ -48,14 +48,14 @@ The dataset used contains anonymized customer data, including:
    macro avg       0.57      0.60      0.54      6000
 weighted avg       0.72      0.59      0.62      6000
 
-10. The model is better at detecting defaulters (recall = 61%) than at correctly predicting them (precision = 29%). -Overal recall of the minority class after SMOTE is good but there’s still a high false positive rate
-12.
+The model is better at detecting defaulters (recall = 61%) than at correctly predicting them (precision = 29%). -Overal recall of the minority class after SMOTE is good but there’s still a high false positive rate
+
 ## 3. **Threshold Tuning**
      F1-score, precision, and recall plotted to find optimal decision threshold.
-14. ![image](https://github.com/user-attachments/assets/630d7801-62ab-4266-97d3-ee6fe8e742e8)
+ ![image](https://github.com/user-attachments/assets/630d7801-62ab-4266-97d3-ee6fe8e742e8)
 
-15. We use threshold tuning to find a balanced trade-off between recall and precision.
-16.    precision    recall  f1-score   support
+We use threshold tuning to find a balanced trade-off between recall and precision.
+    precision    recall  f1-score   support
 
            0       0.90      0.22      0.35      4673
            1       0.25      0.91      0.39      1327
