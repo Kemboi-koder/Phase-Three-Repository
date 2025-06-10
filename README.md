@@ -105,7 +105,7 @@ BILL_AMT2 & PAY_AMT2: Financial capacity indicators. Bill amounts show spending 
 
 -In conclusion the new model is better at detecting and predicting possible defaulters while reducing the number of non-defaulters flagged as compared to the previous model.
 
-## Step 9: ✅ Recommendations
+## 5: ✅ Recommendations
 -Clients with low credit limits and inconsistent past payments should be flagged for review.
 
 -Younger clients and those with high monthly bill statements may require stricter approval conditions.
@@ -116,7 +116,7 @@ Married clients have a better loan repayment rate than single ones. This could p
 
 -Incorporate this model into your approval system for early risk identification.
 
-## Step 10:📉 Study Limitations
+## 6:📉 Study Limitations
 -The dataset is based on historical data from Taiwan and may not generalize well to other regions.
 
 -Categorical variables like EDUCATION and MARRIAGE were grouped manually and may affect model accuracy.
