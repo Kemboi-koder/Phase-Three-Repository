@@ -105,17 +105,26 @@ BILL_AMT2 & PAY_AMT2: Financial capacity indicators. Bill amounts show spending 
 
 -In conclusion the new model is better at detecting and predicting possible defaulters while reducing the number of non-defaulters flagged as compared to the previous model.
 
-## ✅ Recommendations
+## Step 9: ✅ Recommendations
+-Clients with low credit limits and inconsistent past payments should be flagged for review.
 
-- Deploy as a pre-screening tool in lending workflows.
-- Use ensemble models for improved stability.
-- Perform fairness testing to ensure ethical AI use.
+-Younger clients and those with high monthly bill statements may require stricter approval conditions.
 
-## ⚠️ Limitations
+Clients with lower education levels have a higher loan default rate, suggesting an element of financial literacy in funds management.
 
-- Historical data only (no temporal dynamics).
-- Risk of overfitting with a single tree.
-- Imbalanced classes may still affect model performance.
+Married clients have a better loan repayment rate than single ones. This could possibly be due to the fact that having two contributors in a household eases the burden on financial resources.
+
+-Incorporate this model into your approval system for early risk identification.
+
+## Step 10:📉 Study Limitations
+-The dataset is based on historical data from Taiwan and may not generalize well to other regions.
+
+-Categorical variables like EDUCATION and MARRIAGE were grouped manually and may affect model accuracy.
+
+-The model might discriminate along the lines of categorical data depending on the inherited bias from the train data.
+
+-Logistic Regression may underfit, and Decision Trees may overfit without pruning or ensemble methods.
+
 
 
 
