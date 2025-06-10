@@ -28,14 +28,14 @@ The dataset used contains anonymized customer data, including:
 
 ## 🧠 Methodology
 
-## 1.**Preprocessing**: Encoding categorical variables.
+## 1.<**Preprocessing**: Encoding categorical variables.>
 2. Convert the categorical columns (SEX, EDUCATION, MARRIAGE) into dummy variables using one-hot encoding, then drop the first category to prevent multicollinearity. This prepares the model for log regression.
 3. 
 4. ![image](https://github.com/user-attachments/assets/e114792f-f7ea-4b8a-8003-8fd338fe0474)
 
 5. The "defaulted" class seems to be imbalanced. We initialize SMOTE, which will create synthetic data points in the minority class to oversample it. We import SMOTE from imblearn and import the train_test_split sklearn. We then train the model on the synthetic data points.
 6. 
-   ##2. **Modeling**: Fitting a logistic regression model. Train a Decision Tree Classifier.
+   ## 2. **Modeling**: Fitting a logistic regression model. Train a Decision Tree Classifier.
 8. Now that all our columns are in numeric form and class imbalance has been resolved, we perform a logistic regression. Fit the trained data onto a logistic regression model to predict whether a customer will default. This model serves as a strong and interpretable baseline. We use **sklearn** to perform the regression to get the regression report.
 9. Classification Report:
 
